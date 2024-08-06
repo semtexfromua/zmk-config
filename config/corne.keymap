@@ -10,14 +10,13 @@
 
 / {
     behaviors {
-        behaviorhot: behaviorhot {
+        homerow: homerow {
             compatible = "zmk,behavior-hold-tap";
-            label = "BEHAVIORHOT";
-            bindings = <&mo>, <&kp>;
+            label = "HOMEROW";
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
-            hold-trigger-key-positions = <38 39 13 14 15 16 19 20 21 22 0>;
+            tapping-term-ms = <150>;
         };
     };
 
@@ -32,10 +31,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&mt TAB ESCAPE  &kp Q        &kp W        &kp E           &kp R           &kp T          &kp Y        &kp U            &kp I            &kp O        &kp P                      &kp BSPC
-&kp LEFT_SHIFT  &mt LSHFT A  &mt LCTRL S  &mt LEFT_WIN D  &mt LEFT_ALT F  &kp G          &kp H        &mt RIGHT_ALT J  &mt RIGHT_WIN K  &mt RCTRL L  &mt RIGHT_SHIFT SEMICOLON  &kp SQT
-&kp LCTRL       &kp Z        &kp X        &kp C           &kp V           &kp B          &kp N        &kp M            &kp COMMA        &kp DOT      &kp FSLH                   &kp DELETE
-                                          &kp LGUI        &mo 1           &lt 1 SPACE    &lt 2 ENTER  &mo 2            &kp RALT
+&homerow TAB ESCAPE  &kp Q             &kp W             &kp E                &kp R                &kp T          &kp Y        &kp U                 &kp I                 &kp O             &kp P                           &kp BSPC
+&kp LEFT_SHIFT       &homerow LSHFT A  &homerow LCTRL S  &homerow LEFT_WIN D  &homerow LEFT_ALT F  &kp G          &kp H        &homerow RIGHT_ALT J  &homerow RIGHT_WIN K  &homerow RCTRL L  &homerow RIGHT_SHIFT SEMICOLON  &kp SQT
+&kp LCTRL            &kp Z             &kp X             &kp C                &kp V                &kp B          &kp N        &kp M                 &kp COMMA             &kp DOT           &kp FSLH                        &kp DELETE
+                                                         &kp LGUI             &mo 1                &lt 1 SPACE    &lt 2 ENTER  &mo 2                 &kp RALT
             >;
         };
 
