@@ -17,7 +17,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <150>;
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
         };
@@ -49,10 +49,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB     &kp NUMBER_6  &kp N7        &kp N8        &kp N9        &kp N0           &kp EXCLAMATION  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp ASTERISK  &kp AMPERSAND         &kp AT_SIGN
-&bt BT_CLR  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5           &kp EQUAL        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PLUS      &kp PERCENT           &kp HASH
-&kp LSHFT   &kp LC(Z)     &kp LC(Y)     &kp LC(C)     &kp LC(V)     &kp LG(SPACE)    &kp UNDERSCORE   &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp MINUS     &kp NON_US_BACKSLASH  &kp PIPE
-                                        &kp LGUI      &trans        &trans           &kp BACKSPACE    &homerow SPACE ENTER  &kp DEL
+&kp TAB    &kp NUMBER_6  &kp N7        &kp N8        &kp N9        &kp N0        &kp EXCLAMATION  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp ASTERISK  &kp AMPERSAND         &kp AT_SIGN
+&trans     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5        &kp EQUAL        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PLUS      &kp PERCENT           &kp HASH
+&kp LSHFT  &trans        &trans        &trans        &trans        &kp DOLLAR    &kp UNDERSCORE   &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp MINUS     &kp NON_US_BACKSLASH  &kp PIPE
+                                       &kp LGUI      &trans        &trans        &kp BACKSPACE    &homerow SPACE ENTER  &kp DEL
             >;
         };
 
