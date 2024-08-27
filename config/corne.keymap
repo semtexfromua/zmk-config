@@ -35,7 +35,7 @@
 
             bindings = <
 &homerow ESCAPE TAB  &kp Q             &kp W  &kp E         &kp R           &kp T               &kp Y             &kp U                 &kp I      &kp O    &kp P                           &kp LEFT_BRACKET
-&kp LEFT_SHIFT       &homerow LSHFT A  &kp S  &kp D         &kp F           &homerow LCTRL G    &homerow RCTRL H  &kp J                 &kp K      &kp K    &homerow RIGHT_SHIFT SEMICOLON  &kp SQT
+&kp LEFT_SHIFT       &homerow LSHFT A  &kp S  &kp D         &kp F           &homerow LCTRL G    &homerow RCTRL H  &kp J                 &kp K      &kp L    &homerow RIGHT_SHIFT SEMICOLON  &kp SQT
 &kp LCTRL            &kp Z             &kp X  &kp C         &kp V           &kp B               &kp N             &kp M                 &kp COMMA  &kp DOT  &kp FSLH                        &kp RIGHT_BRACKET
                                               &kp LEFT_ALT  &lt 2 LEFT_WIN  &lt 1 SPACE         &kp BACKSPACE     &homerow SPACE ENTER  &kp DEL
             >;
