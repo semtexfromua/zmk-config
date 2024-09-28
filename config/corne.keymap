@@ -11,6 +11,16 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    gpio-keys {
+        compatible = "gpio-keys";
+        vcc_cutoff: vcc_cutoff {
+            label = "VCC Cutoff";
+            gpios = <&gpio0 13 GPIO_ACTIVE_LOW>;
+        };
+    };
+};
+
+/ {
     behaviors {
         homerow: homerow {
             compatible = "zmk,behavior-hold-tap";
