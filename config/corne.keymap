@@ -64,6 +64,8 @@
     status = "okay";
 };
 
-&chosen {
-    zmk,studio-rpc-uart = &uart0;
+ / {
+    chosen {
+        zmk,studio-rpc-uart = &uart0;
+    };
 };
