@@ -68,7 +68,7 @@
 
 / {
     chosen {
-        zmk,underglow = &my_rgb;
+        zmk,underglow = &ws2812;
     };
 };
 
