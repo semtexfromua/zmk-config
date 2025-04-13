@@ -1,13 +1,15 @@
-&gpio0 {
-    ws2812_gpio: ws2812_gpio {
-        compatible = "worldsemi,ws2812";
-        status = "okay";
-        gpios = <&gpio0 13 GPIO_ACTIVE_HIGH>;
-        chain-length = <21>; // або скільки у тебе світлодіодів
-        label = "WS2812_GPIO";
+/ {
+    chosen {
+        zmk,underglow = &ws2812_gpio;
     };
-};
 
-&chosen {
-    zmk,underglow = &ws2812_gpio;
+    gpio0 {
+        ws2812_gpio: ws2812_gpio {
+            compatible = "worldsemi,ws2812";
+            status = "okay";
+            gpios = <&gpio0 13 GPIO_ACTIVE_HIGH>;
+            chain-length = <21>;
+            label = "WS2812_GPIO";
+        };
+    };
 };
