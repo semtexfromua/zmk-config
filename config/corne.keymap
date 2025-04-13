@@ -58,7 +58,7 @@
 
 
 &gpio0 {
-    my_rgb: ws2812 {
+    ws2812: ws2812 {
         compatible = "worldsemi,ws2812";
         gpios = <&gpio0 13 GPIO_ACTIVE_HIGH>;
         chain-length = <21>;
