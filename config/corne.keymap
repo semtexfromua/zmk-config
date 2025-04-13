@@ -67,7 +67,7 @@
     };
 };
 
-/ chosen {
+&chosen {
     zmk,underglow = &ws2812_gpio;
 };
 
