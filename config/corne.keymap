@@ -59,10 +59,10 @@
 / {
     layer_names {
         compatible = "zmk,layer-names";
-        label = "Layer Names";
-        names = "Base", "Lower", "Raise";
+        names = "Default", "Lower", "Raise";
     };
 };
+
 
 
 &led_strip { chain-length = <27>; };
