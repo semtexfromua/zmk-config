@@ -1,6 +1,6 @@
 /*
- * Конфігурація дисплею для Corne з Nice!Nano v2
- * Стандартні піни: GPIO 17 (SDA), GPIO 20 (SCL)
+ * Новий I2C інтерфейс i2c1 для дисплею
+ * Nice!Nano v2 - GPIO 22 (SDA), GPIO 24 (SCL)
  */
 
 #include <dt-bindings/pinctrl/nordic,nrf-pinctrl.h>
@@ -15,11 +15,25 @@
     /* configuration for i2c0 device, default state */
     i2c0_default: i2c0_default {
         group1 {
-            psels = <NRF_PSEL(TWIM_SDA, 0, 22)>, <NRF_PSEL(TWIM_SCL, 0, 24)>;
+            psels = <NRF_PSEL(TWIM_SDA, 0, 17)>, <NRF_PSEL(TWIM_SCL, 0, 20)>;
         };
     };
 
     i2c0_sleep: i2c0_sleep {
+        group1 {
+            psels = <NRF_PSEL(TWIM_SDA, 0, 17)>, <NRF_PSEL(TWIM_SCL, 0, 20)>;
+            low-power-enable;
+        };
+    };
+
+    /* Конфігурація для нового i2c1 інтерфейсу */
+    i2c1_default: i2c1_default {
+        group1 {
+            psels = <NRF_PSEL(TWIM_SDA, 0, 22)>, <NRF_PSEL(TWIM_SCL, 0, 24)>;
+        };
+    };
+
+    i2c1_sleep: i2c1_sleep {
         group1 {
             psels = <NRF_PSEL(TWIM_SDA, 0, 22)>, <NRF_PSEL(TWIM_SCL, 0, 24)>;
             low-power-enable;
@@ -32,6 +46,16 @@
     status = "okay";
     pinctrl-0 = <&i2c0_default>;
     pinctrl-1 = <&i2c0_sleep>;
+    pinctrl-names = "default", "sleep";
+    clock-frequency = <100000>;
+};
+
+/* Створюємо новий i2c1 інтерфейс */
+&i2c1 {
+    compatible = "nordic,nrf-twim";
+    status = "okay";
+    pinctrl-0 = <&i2c1_default>;
+    pinctrl-1 = <&i2c1_sleep>;
     pinctrl-names = "default", "sleep";
     clock-frequency = <100000>;
 
