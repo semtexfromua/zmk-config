@@ -1,3 +1,9 @@
+/ {
+    chosen {
+        zephyr,display = &oled;
+    };
+};
+
 &pinctrl {
     i2c0_default: i2c0_default {
         group1 {
