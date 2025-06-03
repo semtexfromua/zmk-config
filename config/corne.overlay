@@ -3,6 +3,8 @@
  * Nice!Nano v2 - GPIO 22 (SDA), GPIO 24 (SCL)
  */
 
+#include <dt-bindings/pinctrl/nordic,nrf-pinctrl.h>
+
 &pinctrl {
     /* configuration for i2c0 device, default state */
     i2c0_default: i2c0_default {
